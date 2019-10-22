@@ -57,21 +57,18 @@ var applyFilter = function(key, filtered, data) {
     return ActionFilters.applyFilter(key, filtered, data);
 };
 
-if (exports) { // are we running in Node
-    exports.addAction = addAction;
-    exports.doAction = doAction;
-    exports.addFilter = addFilter;
-    exports.applyFilter = applyFilter;
-} else {
-    window.onload = function() {
-        doAction('windowLoaded', window);
-    };
+window.addAction = addAction;
+window.doAction = doAction;
+window.addFilter = addFilter;
+window.applyFilter = applyFilter;
+window.onload = function() {
+    doAction('windowLoaded', window);
+};
 
-    window.addEventListener("DOMContentLoaded", function() {
-        doAction('documentReady');
-    }, false);
+window.addEventListener("DOMContentLoaded", function() {
+    doAction('documentReady');
+}, false);
 
-    window.addEventListener("click", function(event) {
-        doAction('mouseClicked', event);
-    }, false);
-}
+window.addEventListener("click", function(event) {
+    doAction('mouseClicked', event);
+}, false);
