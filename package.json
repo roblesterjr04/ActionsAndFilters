@@ -1,0 +1,15 @@
+{
+  "name": "action-filters",
+  "version": "1.0.0",
+  "description": "Similar to wordpress, create action hooks and filter hooks with simple calls.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "actions",
+    "filters"
+  ],
+  "author": "Robert Lester",
+  "license": "ISC"
+}
